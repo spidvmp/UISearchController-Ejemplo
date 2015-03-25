@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class NCTMainTable;
 
 @interface NCTResultsTableController : UITableViewController
 
 @property(strong,nonatomic) NSMutableArray *filtered;
+@property (strong,nonatomic) NCTMainTable *tablaOriginal;
 
 @end

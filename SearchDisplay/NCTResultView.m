@@ -16,6 +16,8 @@
 
 @implementation NCTResultView
 
+//esto no hace nada del otro mundo, muestra el nombre de la ciudad que has pulsado, si lo has pulsado desde la tabla original sale de un color y si es desde la tabla de datos filtrados es de otro color
+
 -(id)initWithElement:(NSString *)element inResult:(BOOL)search{
     if ( self = [super init]) {
         _label=[[UILabel alloc]initWithFrame:CGRectMake(40, 100, 200, 40)];
@@ -33,21 +35,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //añado el label a la vista
+    [self.view addSubview:self.label];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

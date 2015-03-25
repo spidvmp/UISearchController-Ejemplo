@@ -8,6 +8,7 @@
 
 #import "NCTResultsTableController.h"
 #import "NCTResultView.h"
+#import "NCTMainTable.h"
 
 @interface NCTResultsTableController ()
 
@@ -17,13 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,19 +30,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    NSLog(@"numberOfSections de la tabla resultsController");
+    //NSLog(@"numberOfSections de la tabla resultsController");
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    NSLog(@"numberOfRows de la tabla resultsController %lu",(unsigned long)[self.filtered count]);
+    //NSLog(@"numberOfRows de la tabla resultsController %lu",(unsigned long)[self.filtered count]);
     return [self.filtered count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"cellForRowAtindex de la tabla resultsController");
+    //NSLog(@"cellForRowAtindex de la tabla resultsController");
     static NSString *cellId=@"celda";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
@@ -63,7 +58,21 @@
     
     NSLog(@"Did select  del resultsController");
     NCTResultView *rview=[[NCTResultView alloc]initWithElement:[self.filtered objectAtIndex:indexPath.row] inResult:YES];
-    [self.navigationController pushViewController:rview animated:YES];
+//    [self.tablaOriginal.searchController setActive:NO];
+//    [self.tablaOriginal.navigationController pushViewController:rview animated:YES];
+//    [self presentViewController:rview animated:YES completion:^{
+//        nil;
+//    }];
+    //con esto llego al searchcontroller
+    UISearchController *sc = (UISearchController*)self.parentViewController;
+    sc.active=NO;
+    NCTMainTable *mt=(NCTMainTable*)sc.delegate;
+    [mt.navigationController pushViewController:rview animated:NO];
+    
+    
+    //[self.presentingViewController.navigationController pushViewController:rview animated:YES];
+    //[self.navigationController pushViewController:rview animated:YES];
+
 }
 
 

@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B8E605F1AC06CF700859BAC /* NCTResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E605E1AC06CF700859BAC /* NCTResultView.m */; };
+		2B8E60611AC0964600859BAC /* NCTResultsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B8E60601AC0964600859BAC /* NCTResultsTableController.m */; };
 		2BC556991AC02BDA00D93991 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC556981AC02BDA00D93991 /* main.m */; };
 		2BC5569C1AC02BDA00D93991 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC5569B1AC02BDA00D93991 /* AppDelegate.m */; };
 		2BC5569E1AC02BDA00D93991 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BC5569D1AC02BDA00D93991 /* Images.xcassets */; };
 		2BC556A11AC02BDA00D93991 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BC5569F1AC02BDA00D93991 /* LaunchScreen.xib */; };
 		2BC556AD1AC02BDA00D93991 /* SearchDisplayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC556AC1AC02BDA00D93991 /* SearchDisplayTests.m */; };
 		2BC556B81AC02C6400D93991 /* NCTMainTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC556B71AC02C6400D93991 /* NCTMainTable.m */; };
-		2BC556E01AC02F5E00D93991 /* NCTResultsTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC556DF1AC02F5E00D93991 /* NCTResultsTableController.m */; };
+		2BC556E01AC02F5E00D93991 /* NCTResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BC556DF1AC02F5E00D93991 /* NCTResultView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		2B8E605D1AC06CF700859BAC /* NCTResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTResultView.h; sourceTree = "<group>"; };
-		2B8E605E1AC06CF700859BAC /* NCTResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTResultView.m; sourceTree = "<group>"; };
+		2B8E60601AC0964600859BAC /* NCTResultsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTResultsTableController.m; sourceTree = "<group>"; };
 		2BC556931AC02BDA00D93991 /* SearchDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BC556971AC02BDA00D93991 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BC556981AC02BDA00D93991 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,8 +42,8 @@
 		2BC556AC1AC02BDA00D93991 /* SearchDisplayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchDisplayTests.m; sourceTree = "<group>"; };
 		2BC556B61AC02C6400D93991 /* NCTMainTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTMainTable.h; sourceTree = "<group>"; };
 		2BC556B71AC02C6400D93991 /* NCTMainTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTMainTable.m; sourceTree = "<group>"; };
-		2BC556DE1AC02F5E00D93991 /* NCTResultsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NCTResultsTableController.h; path = ../NCTResultsTableController.h; sourceTree = "<group>"; };
-		2BC556DF1AC02F5E00D93991 /* NCTResultsTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NCTResultsTableController.m; path = ../NCTResultsTableController.m; sourceTree = "<group>"; };
+		2BC556DE1AC02F5E00D93991 /* NCTResultsTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NCTResultsTableController.h; sourceTree = "<group>"; };
+		2BC556DF1AC02F5E00D93991 /* NCTResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NCTResultView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +90,9 @@
 				2BC556B61AC02C6400D93991 /* NCTMainTable.h */,
 				2BC556B71AC02C6400D93991 /* NCTMainTable.m */,
 				2BC556DE1AC02F5E00D93991 /* NCTResultsTableController.h */,
-				2BC556DF1AC02F5E00D93991 /* NCTResultsTableController.m */,
+				2B8E60601AC0964600859BAC /* NCTResultsTableController.m */,
+				2BC556DF1AC02F5E00D93991 /* NCTResultView.m */,
 				2B8E605D1AC06CF700859BAC /* NCTResultView.h */,
-				2B8E605E1AC06CF700859BAC /* NCTResultView.m */,
 				2BC5569D1AC02BDA00D93991 /* Images.xcassets */,
 				2BC5569F1AC02BDA00D93991 /* LaunchScreen.xib */,
 				2BC556961AC02BDA00D93991 /* Supporting Files */,
@@ -226,9 +226,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BC5569C1AC02BDA00D93991 /* AppDelegate.m in Sources */,
-				2BC556E01AC02F5E00D93991 /* NCTResultsTableController.m in Sources */,
+				2B8E60611AC0964600859BAC /* NCTResultsTableController.m in Sources */,
+				2BC556E01AC02F5E00D93991 /* NCTResultView.m in Sources */,
 				2BC556991AC02BDA00D93991 /* main.m in Sources */,
-				2B8E605F1AC06CF700859BAC /* NCTResultView.m in Sources */,
 				2BC556B81AC02C6400D93991 /* NCTMainTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
