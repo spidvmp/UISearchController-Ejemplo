@@ -57,21 +57,14 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     NSLog(@"Did select  del resultsController");
-    NCTResultView *rview=[[NCTResultView alloc]initWithElement:[self.filtered objectAtIndex:indexPath.row] inResult:YES];
-//    [self.tablaOriginal.searchController setActive:NO];
-//    [self.tablaOriginal.navigationController pushViewController:rview animated:YES];
-//    [self presentViewController:rview animated:YES completion:^{
-//        nil;
-//    }];
-    //con esto llego al searchcontroller
-    UISearchController *sc = (UISearchController*)self.parentViewController;
-    sc.active=NO;
-    NCTMainTable *mt=(NCTMainTable*)sc.delegate;
-    [mt.navigationController pushViewController:rview animated:NO];
+
+    //he obtenido el objeto  que han pulsado. lo envio a traves del protocolo a la tabla principal, que es quien tiene el navigation controller
+    if ([self.resultsDelegate respondsToSelector:@selector(resultsTableViewController:didSelectRow:)]) {
+        //le envio el mensaje que que me han seleccionado y le paso el objeto seleccionado
+        [self.resultsDelegate resultsTableViewController:self didSelectRow:[self.filtered objectAtIndex:indexPath.row]];
+    }
     
-    
-    //[self.presentingViewController.navigationController pushViewController:rview animated:YES];
-    //[self.navigationController pushViewController:rview animated:YES];
+
 
 }
 

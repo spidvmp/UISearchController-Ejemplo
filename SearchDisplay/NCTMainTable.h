@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-@class NCTResultsTableController;
+#import "NCTResultsTableController.h"
 
-@interface NCTMainTable : UITableViewController
+
+
+
+@interface NCTMainTable : UITableViewController <NCTResultsTableControllerDelegate>
 
 @property ( strong,nonatomic) NSArray *elementos;
+
 
 
 @end

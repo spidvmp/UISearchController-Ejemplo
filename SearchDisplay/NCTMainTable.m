@@ -47,6 +47,8 @@
     
     //creo el controlador de la tabla que da los resultados
     _resultsTableController = [[NCTResultsTableController alloc] init];
+    //le indico a la tabla resultados quien soy yo para que me envie informacion de la celda pulsada a traves del protocolo
+    self.resultsTableController.resultsDelegate=self;
     
     
     //creo el controlador del search, el cual tendra una referencia al resultsController
@@ -83,6 +85,7 @@
 #pragma mark - Table Delegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //NSLog(@"select row del mainTable");
+
     NCTResultView *rview=[[NCTResultView alloc]initWithElement:[self.elementos objectAtIndex:indexPath.row] inResult:NO];
     [self.navigationController pushViewController:rview animated:YES];
 }
@@ -116,6 +119,20 @@
     return cell;
 }
 
+#pragma mark - NCTResultsTableControllerDelegate
+-(void) resultsTableViewController:(NCTResultsTableController *)trC didSelectRow:(id)object {
+    //en la tabla resultado, han seleccionado una celda. Me pasan el objeto seleccionado
+    NSLog(@"resultsTableViewController");
+    //se que el objeto que me pasan es de tipo NSString
+    NSString *obj=object;
+    //desactivo el UISearchController. Esto elimina la tabla de resultados
+    self.searchController.active=NO;
+    //ahora le coloco al navigationcontroller la vista de detalle que han seleccionado
+    NCTResultView *rview=[[NCTResultView alloc]initWithElement:obj inResult:YES];
+    [self.navigationController pushViewController:rview animated:YES];
+    
+    
+}
 #pragma mark - UISearchBarDelegate
 //todas las acciones que se pueden hacer con el searchBar, boton de busqueda, cancelar, saber que empiezan a editar, etc
 
